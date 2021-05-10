@@ -1,0 +1,138 @@
+body, html {
+  height: 100%;
+}
+
+.stylish-form {
+  background-image:url('https://blog.woli.com.br/wp-content/uploads/2019/01/271732-x-temas-para-treinamentos-corporativos-indispensaveis.jpg'); 
+  
+  background-size: cover;
+  min-height: 100%;
+}
+.stylish-form h2 {
+  color:#1c86b8;
+  margin-top:50px;
+}
+.font_white {
+  color:#fff !important;
+}
+.mar20 {
+  margin:10px;
+}
+.img-center{
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+.inner-section {
+  background-color:#1c86b8;
+  width:350px;
+  display:block;
+  border-radius:15px;
+  margin:0 auto;
+}
+.inside-form{
+  border-radius:8px;
+  padding-top:10px;
+  padding-bottom:30px;
+}
+.inside-form h2 {
+  font-weight:700;
+  margin-bottom: 50px;
+}
+.inside-form ul {
+  list-style-type:none;
+  text-align:center;
+  margin-top:30px;
+}
+.inside-form ul >li {
+  display:inline-block;
+}
+.inside-form ul >li > i {
+  margin-top:18px;
+}
+.icon-holder {
+  background: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.dsp-flex {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center
+}
+.input-group, .form-group {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.input-group-addon {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #FFFFFF;
+  border-radius:25px;
+  margin-right: 10px;
+}
+
+.form-option {
+  background-color: #1c86b8;
+}
+
+.form-control,.form-control:focus,.form-control:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border-radius:25px;
+  border:none;
+  font-size:14px;
+}
+
+
+.form-select {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border-radius:25px;
+  border:none;
+  font-size:14px;
+  margin-right: 10px;
+}
+
+.footer {
+  margin-top:30px;
+  margin-bottom:20px;
+}
+
+input::placeholder {
+  color: #fff !important;
+}
+
+.btn-lg {
+  transition-duration: 0.4s;
+  font-size: 1em;
+  border-radius: 0.25rem;
+  padding: 15px 48px;
+}
+.btn-round {
+  border-width: 1px;
+  border-radius: 30px !important;
+  padding: 11px 23px;
+}
+.btn-neutral,.btn-neutral:focus,.btn-neutral:hover {
+  background-color: #FFFFFF;
+  color: #1c86b8;
+}
+.btn:hover {
+  background-color: #124066; /* Green */
+  color: white;
+}

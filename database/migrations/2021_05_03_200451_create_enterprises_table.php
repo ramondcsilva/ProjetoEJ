@@ -17,7 +17,6 @@ class CreateEnterprisesTable extends Migration
         Schema::create('enterprises', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
             $table->timestamps();
 
             $table->foreignId('federation_id')->constrained();

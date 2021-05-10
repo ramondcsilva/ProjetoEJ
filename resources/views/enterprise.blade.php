@@ -27,10 +27,6 @@
                 <input type="text" class="form-control" name="name" placeholder="Nome da Empresa Junior" value="{{ $enterprise->name}}">
               </div>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-envelope "></i></span>
-                <input type="email" class="form-control" name="email" placeholder="E-mail" value="{{ $enterprise->email}}">
-              </div>
-              <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-flag"></i></span>
                 <select class="form-control" name="federation_id" id="federacao">
                 @foreach ($federations as $f)

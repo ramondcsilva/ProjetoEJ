@@ -12,7 +12,6 @@ class Enterprise extends Model
     protected $fillable = [
         'id',
         'name',
-        'email',
         'created_at',
         'updated_at',
         'federation_id'

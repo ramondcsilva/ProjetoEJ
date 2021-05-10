@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/enterprise', [EnterpriseController::class, 'create']);
 Route::post('/enterprise/new', [EnterpriseController::class, 'store']);
 Route::get('/enterprise/list', [EnterpriseController::class, 'index']);
-//Route::post('selectValue')->uses('Enterprise@Controller@meuMetodo')->name('minharota');
+Route::post('/enterprise/list', [EnterpriseController::class, 'selectValue'])->name('/enterprise/list');
 
 Route::get('/federation', [FederationController::class, 'create']);
 Route::post('/federation/new', [FederationController::class, 'store']);

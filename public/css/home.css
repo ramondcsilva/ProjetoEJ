@@ -130,10 +130,33 @@ a:hover {
 .form-control,.form-control:focus,.form-control:hover {
   background-color: #1c86b8;
   color: #fff;
-  border-radius:20px;
+  border-radius:10px;
   border:none;
   font-size:15px;
-  width: 150px;
+  text-align: center;
+  width: 170px;
+  height: 30px;
+  position: static;
+}
+
+.input-group form button{
+  background-color: #1c86b8;
+  color: #fff;
+  border-radius:50px;
+  border:none;
+  padding: 5px 5px;
+  cursor: pointer;
+  position: static;
+}
+
+.input-group form button:hover {
+  background-color: #124066;
+  color: #fff;
+  border-radius:50px;
+  border:none;
+  padding: 5px 5px;
+  cursor: pointer;
+  position: static;
 }
 
 .card {
@@ -211,7 +234,7 @@ tr td:last-child {
   overflow-x: auto;
 }
 
-/* Tablet menu */
+
 @media all and (min-width: 468px) {
   .menu {
       justify-content: center;

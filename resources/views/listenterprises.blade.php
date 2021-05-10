@@ -29,21 +29,18 @@
             <div class="card-header">
               <h3>Empresas Junior</h3>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-flag"></i></span>
-                
-                <select class="form-control" name="select">
-                  <option class="form-option" value="">Todos</option>
-                </select>
-                <button type="submit"> Pesquisar</button>
-              </form>
-
-
+                <form class="input-group-addon" action="{{ route('/enterprise/list') }}" method="post">  
+                @csrf 
+                  <select class="form-control" name="selected">
+                    <option class="form-option" value="0">Todos</option>
+                    @foreach($federation as $f)
+                      <option class="form-option" value="{{$f->id}}">{{$f->name}}</option>
+                    @endforeach
+                  </select>
+                  <button type="submit">Pesquisar</button>
+                </form>
+                </div>
               </div>
-              <button>See all <span class="las la-arrow-right">
-              </span></button>
-
-            </div>
-
             <div class="card-body">
               <div class="table-responsive">
                 <table width="100%">
@@ -56,12 +53,19 @@
                   </thead>
                   <tbody>
                   @foreach ($enterprises as $e)
+                    @if($select == $e->federation_id)
                       <tr>
                         <td>{{$e->name}}</td>
                         <td>{{$e->federation->name}}</td>
                         <td>{{$e->federation->state->name}}</td>
                       </tr>
-                    
+                    @elseif($select == 0)  
+                      <tr>
+                        <td>{{$e->name}}</td>
+                        <td>{{$e->federation->name}}</td>
+                        <td>{{$e->federation->state->name}}</td>
+                      </tr>
+                    @endif
                   @endforeach
                   </tbody>
                 </table>

@@ -9,16 +9,29 @@ use Illuminate\Support\Facades\Redirect;
 
 class EnterpriseController extends Controller
 {
+
+    
+
+    public function selectValue(Request $request)
+    {
+        $enterprises = Enterprise::get();
+        $federation = Federation::get();
+        $select = $request->selected;
+
+        return view('listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select]);
+    }
+    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $enterprises = Enterprise::get();
         $federation = Federation::get();
-        return view('listenterprises', ['enterprises' => $enterprises, 'federation' => $federation]);
+        $select = $request->selected;
+        return view('listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select]);
     }
 
     /**

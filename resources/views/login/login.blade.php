@@ -17,22 +17,23 @@
     <div class="row mar20" >
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="inner-section">
-          <form method="POST" action="https://google.co.in">
+          <form method="post" action="{{route('/login/auth')}}">
+          @csrf
             <div class="mar20 inside-form">
               <h2 class="font_white text-center">Login</h2>
               
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope "></i></span>
-                <input type="email" class="form-control" name="text" placeholder="E-mail">
+                <input type="email" class="form-control" value="admin@admin.com" name="email" placeholder="E-mail">
               </div>
             
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-flag"></i></span>
-                <input type="password" class="form-control" name="text" placeholder="Senha">
+                <input type="password" class="form-control" name="password" placeholder="Senha">
               </div>
 
               <div class="footer text-center">
-                <a href="{{ url('federation')}}" class="btn btn-neutral btn-round btn-lg">Concluir</a>
+                <button type="submit" class="btn btn-neutral btn-round btn-lg">Entrar</button>
               </div>
 
             </div>

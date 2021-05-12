@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EnterpriseController;
 use App\Http\Controllers\FederationController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +28,7 @@ Route::post('/enterprise/list', [EnterpriseController::class, 'selectValue'])->n
 Route::get('/federation', [FederationController::class, 'create']);
 Route::post('/federation/new', [FederationController::class, 'store']);
 
-Route::get('/login', [UserController::class, 'index']);
-//Route::get('/homeLogin', [FederationController::class, 'index']);
+Route::get('/login', [AuthController::class, 'showLogin']);
+Route::post('/login/auth', [AuthController::class, 'login'])->name('/login/auth');
+Route::get('/home', [AuthController::class, 'dashboard']);
+Route::get('/logout', [AuthController::class, 'logout']);

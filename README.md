@@ -7,11 +7,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Project Setup
+## Project Setup #1
 
 composer install
 
-Config .env
+## Config .env
+
+DB_DATABASE=projetoej
+DB_USERNAME=root
+DB_PASSWORD=
+
+## Project Setup #2
 
 php artisan key:generate
 

@@ -7,9 +7,25 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Populando o DB Table Estados usando Seeder
+## Project Setup
+
+composer install
+
+Config .env
+
+php artisan key:generate
+
+php artisan migrate
+
+npm install
+
+## Populate DB Table Estados using Seeder
 
 php artisan db:seed
+
+## Run Server
+
+php artisan serve
 
 ## About Laravel
 

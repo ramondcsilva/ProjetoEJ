@@ -9,10 +9,10 @@ class AuthController extends Controller
 {
     
     public function dashboard(){
-        if(Auth::check == true){
-            return redirect()->route('home.home');
+        if(Auth::check() === true){
+            return view('home.homeLoged');
         }
-        return view('home.home');
+        return redirect()->route('login');
     }
 
     public function showLogin(){
@@ -27,14 +27,14 @@ class AuthController extends Controller
         ];
         
         if(Auth::attempt($credentials)){
-            return redirect()->route('home.home');
+            return redirect()->route('homeLoged');
         }
 
-        return view('enterprise');
+        return view('login.login');
     }
 
     public function logout(){
         Auth::logout();
-        return view('federation');
+        return redirect()->route('/');
     }
 }

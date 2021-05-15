@@ -18,17 +18,24 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('home.home');
-});
+})->name('/');
 
-Route::get('/enterprise', [EnterpriseController::class, 'create']);
-Route::post('/enterprise/new', [EnterpriseController::class, 'store']);
+Route::get('/enterprise', [EnterpriseController::class, 'create'])->middleware('auth');
+Route::post('/enterprise/new', [EnterpriseController::class, 'store'])->middleware('auth');
+
+Route::get('/enterprise/list/loged', [EnterpriseController::class, 'indexLoged'])->middleware('auth');
+Route::post('/enterprise/list/loged', [EnterpriseController::class, 'selectValueLoged'])->name('/enterprise/list/loged')->middleware('auth');
+
 Route::get('/enterprise/list', [EnterpriseController::class, 'index']);
 Route::post('/enterprise/list', [EnterpriseController::class, 'selectValue'])->name('/enterprise/list');
 
-Route::get('/federation', [FederationController::class, 'create']);
-Route::post('/federation/new', [FederationController::class, 'store']);
+Route::get('/federation', [FederationController::class, 'create'])->middleware('auth');
+Route::post('/federation/new', [FederationController::class, 'store'])->middleware('auth');
 
-Route::get('/login', [AuthController::class, 'showLogin']);
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login/auth', [AuthController::class, 'login'])->name('/login/auth');
-Route::get('/home', [AuthController::class, 'dashboard']);
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/home', [AuthController::class, 'dashboard'])->name('homeLoged')->middleware('auth');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+//Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

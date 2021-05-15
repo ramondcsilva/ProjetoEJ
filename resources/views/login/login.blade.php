@@ -24,7 +24,7 @@
               
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope "></i></span>
-                <input type="email" class="form-control" value="admin@admin.com" name="email" placeholder="E-mail">
+                <input type="email" class="form-control" value="a@admin.com" name="email" placeholder="E-mail">
               </div>
             
               <div class="input-group">

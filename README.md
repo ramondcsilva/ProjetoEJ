@@ -9,43 +9,43 @@
 
 ## Project Setup #1
 
-´´´bash
+```bash
 composer instal
-´´´
+```
 
 ## Config .env
 
-´´´bash
+```bash
 DB_DATABASE=projetoej
 DB_USERNAME=root
 DB_PASSWORD=
-´´´
+```
 
 ## Project Setup #2
 
-´´´bash
+```bash
 php artisan key:generate
-´´´
+```
 
-´´´bash
+```bash
 php artisan migrate
-´´´
+```
 
-´´´bash
+```bash
 npm install
-´´´
+```
 
 ## Populate DB Table Estados using Seeder
 
-´´´bash
+```bash
 php artisan db:seed
-´´´
+```
 
 ## Run Server
 
-´´´bash
+```bash
 php artisan serve
-´´´
+```
 
 ## About Laravel
 

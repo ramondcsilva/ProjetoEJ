@@ -35,8 +35,15 @@
                   </select>
                   <button type="submit">Pesquisar</button>
                 </form>
-                </div>
               </div>
+              <div class="input-group">
+                <form class="input-group-addon" action="{{ route('/enterprise/list/unique') }}" method="post">  
+                @csrf 
+                  <input class="form-control" type="text" name="search">
+                  <button type="submit">Pesquisar</button>
+                </form>
+              </div>
+            </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table width="100%">
@@ -49,13 +56,19 @@
                   </thead>
                   <tbody>
                   @foreach ($enterprises as $e)
-                    @if($select == $e->federation_id)
+                    @if($search == $e->name)
                       <tr>
                         <td>{{$e->name}}</td>
                         <td>{{$e->federation->name}}</td>
                         <td>{{$e->federation->state->name}}</td>
                       </tr>
-                    @elseif($select == 0)  
+                    @elseif($search == null && $select == $e->federation_id)
+                      <tr>
+                        <td>{{$e->name}}</td>
+                        <td>{{$e->federation->name}}</td>
+                        <td>{{$e->federation->state->name}}</td>
+                      </tr>
+                    @elseif($search == null && $select == 0)  
                       <tr>
                         <td>{{$e->name}}</td>
                         <td>{{$e->federation->name}}</td>

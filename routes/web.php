@@ -28,6 +28,7 @@ Route::post('/enterprise/list/loged', [EnterpriseController::class, 'selectValue
 
 Route::get('/enterprise/list', [EnterpriseController::class, 'index']);
 Route::post('/enterprise/list', [EnterpriseController::class, 'selectValue'])->name('/enterprise/list');
+Route::post('/enterprise/list/unique', [EnterpriseController::class, 'listUnique'])->name('/enterprise/list/unique');
 
 Route::get('/federation', [FederationController::class, 'create'])->middleware('auth');
 Route::post('/federation/new', [FederationController::class, 'store'])->middleware('auth');

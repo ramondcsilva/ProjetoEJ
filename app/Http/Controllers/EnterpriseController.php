@@ -12,13 +12,22 @@ class EnterpriseController extends Controller
 
     
 
+    public function listUnique(Request $request)
+    {
+        $enterprises = Enterprise::get();
+        $federation = Federation::get();
+        $search = $request->search;
+        $select = null;
+        return view('home.listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'search' => $search, 'select' => $select]);
+    }
+
     public function selectValue(Request $request)
     {
         $enterprises = Enterprise::get();
         $federation = Federation::get();
         $select = $request->selected;
-
-        return view('home.listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select]);
+        $search = null;
+        return view('home.listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select, 'search' => $search]);
     }
 
     public function selectValueLoged(Request $request)
@@ -40,7 +49,8 @@ class EnterpriseController extends Controller
         $enterprises = Enterprise::get();
         $federation = Federation::get();
         $select = $request->selected;
-        return view('home.listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select]);
+        $search = $request->search;
+        return view('home.listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select, 'search' => $search]);
     }
 
     /**

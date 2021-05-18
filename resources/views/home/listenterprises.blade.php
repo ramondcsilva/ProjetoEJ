@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="stylish-form">
-    <nav>
+      <nav>
         <ul class="menu">
           <img class="img-nav" src="https://ecompjr.com.br/images/logoNome.png" alt="">
           <li class="logo"></li>

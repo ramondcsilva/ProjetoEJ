@@ -3,6 +3,42 @@ body, html {
   width: 100%;
 }
 
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+
+.box-icon {
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-icon i{
+  width: 40px;
+  background-color: #1c86b8;
+  border-radius: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-icon i:hover {
+  width: 40px;
+  background-color: #124066;
+  border-radius: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .stylish-form {
   background-image:url('https://blog.woli.com.br/wp-content/uploads/2019/01/271732-x-temas-para-treinamentos-corporativos-indispensaveis.jpg'); 
   

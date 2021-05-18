@@ -16,7 +16,6 @@
           <li class="item"><a href="{{ url('enterprise/list/loged')}}">Empresas Junior</a></li>
           <li class="item"><a href="{{ url('enterprise')}}">Cadastrar Empresas Junior</a></li>
           <li class="item"><a href="{{ url('federation')}}">Cadastrar Federação</a></li>
-              
           <li class="item button secondary"><a href="{{ route('logout')}}">Logout</a></li>
         </ul>
       </nav>

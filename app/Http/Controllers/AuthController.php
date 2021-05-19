@@ -13,7 +13,7 @@ class AuthController extends Controller
     
     public function dashboard(){
         if(Auth::check() === true){
-            return view('home.homeLoged');
+            return view('home.home');
         }
         return redirect()->route('login');
     }

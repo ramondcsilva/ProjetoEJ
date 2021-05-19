@@ -11,7 +11,6 @@ body, html {
   user-select: none;
 }
 
-
 .box-icon {
   text-align: center;
   justify-content: center;
@@ -77,13 +76,16 @@ body, html {
 body {
   font-family: sans-serif;
 }
-nav {
+
+.nav-header {
   background: #fff;
-  padding: 5px 20px;
+  padding: 10px 30px;
 }
+
 ul {
   list-style-type: none;
 }
+
 .img-nav{
   display: inline-block;
   vertical-align: top;
@@ -93,26 +95,32 @@ ul {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 a {
   color: #1c86b8;
   text-decoration: none;
 }
+
 a:hover {
   color: #124066;
   text-decoration: solid;
 }
+
 .logo a:hover {
   text-decoration: none;
 }
+
 .menu li {
   font-size: 19px;
   padding: 15px 5px;
   white-space: nowrap;
 }
+
 .logo a,
 .toggle a {
   font-size: 20px;
 }
+
 .button.secondary {
   border-bottom: 1px #444 solid;
 }
@@ -220,7 +228,8 @@ a:hover {
   background: #fff;
   border-radius: 20px;
   padding: auto;
-  width: 1200px;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .card-service {

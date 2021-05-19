@@ -24,9 +24,6 @@ Route::get('/', function () {
 Route::get('/enterprise', [EnterpriseController::class, 'create'])->middleware('auth');
 Route::post('/enterprise/new', [EnterpriseController::class, 'store'])->middleware('auth');
 
-Route::get('/enterprise/list/loged', [EnterpriseController::class, 'indexLoged'])->middleware('auth');
-Route::post('/enterprise/list/loged', [EnterpriseController::class, 'selectValueLoged'])->name('/enterprise/list/loged')->middleware('auth');
-
 Route::get('/services', [AuthController::class, 'servicesView'])->name('services');;
 
 Route::get('/enterprise/list', [EnterpriseController::class, 'index']);
@@ -40,6 +37,3 @@ Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login/auth', [AuthController::class, 'login'])->name('/login/auth');
 Route::get('/home', [AuthController::class, 'dashboard'])->name('homeLoged')->middleware('auth');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
-//Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

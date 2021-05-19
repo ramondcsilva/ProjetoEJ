@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EnterpriseController;
 use App\Http\Controllers\FederationController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::post('/enterprise/new', [EnterpriseController::class, 'store'])->middlewa
 
 Route::get('/enterprise/list/loged', [EnterpriseController::class, 'indexLoged'])->middleware('auth');
 Route::post('/enterprise/list/loged', [EnterpriseController::class, 'selectValueLoged'])->name('/enterprise/list/loged')->middleware('auth');
+
+Route::get('/services', [AuthController::class, 'servicesView'])->name('services');;
 
 Route::get('/enterprise/list', [EnterpriseController::class, 'index']);
 Route::post('/enterprise/list', [EnterpriseController::class, 'selectValue'])->name('/enterprise/list');

@@ -19,9 +19,30 @@ body, html {
   margin-right: auto;
 }
 
+.box-icon-service {
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+
+.box-icon-service i{
+  width: 40px;
+  background-color:white;
+  color: #1c86b8;
+  border-radius: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px; 
+  padding:10px;
+}
+
 .box-icon i{
   width: 40px;
-  background-color: #1c86b8;
+  background-color:#1c86b8;
   border-radius: 30px;
   text-align: center;
   justify-content: center;
@@ -197,7 +218,35 @@ a:hover {
 
 .card {
   background: #fff;
-  border-radius: 5px;
+  border-radius: 20px;
+  padding: auto;
+  width: 1200px;
+}
+
+.card-service {
+  background: #1c86b8;
+  border-radius: 20px;
+  padding: auto;
+  width: 375px;
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-service:hover {
+  background: #124066;
+  border-radius: 20px;
+  padding: auto;
+  width: 375px;
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.15s ease-out;
+}
+
+.card-service:hover .box-icon-service .box-icon-service i {
+  color: #124066;
+  transition: all 0.15s ease-out;
 }
 
 .card-header,
@@ -273,68 +322,68 @@ tr td:last-child {
 
 @media all and (min-width: 468px) {
   .menu {
-      justify-content: center;
+    justify-content: center;
   }
 
   .logo {
-      flex: 1;
+    flex: 1;
   }
 
   .item.button {
-      width: auto;
-      order: 1;
-      display: block;
+    width: auto;
+    order: 1;
+    display: block;
   }
   .toggle {
-      order: 2;
+    order: 2;
   }
   .button.secondary {
-      border: 0;
+    border: 0;
   }
   .button a {
-      padding: 7.5px 15px;
-      background: #1c86b8;
-      /*border: 1px black solid;*/
-      border-radius:50em;
+    padding: 7.5px 15px;
+    background: #1c86b8;
+    /*border: 1px black solid;*/
+    border-radius:50em;
   }
   .button.secondary a {
-      background: rgb(78, 78, 78);    
+    background: rgb(78, 78, 78);    
   }
   .button a:hover {
-      text-decoration: none;
-      transition:all .25s;
+    text-decoration: none;
+    transition:all .25s;
   }
   .button:not(.secondary) a:hover {
-      background: #124066;
-      border-color: black;
+    background: #124066;
+    border-color: black;
   }
   .button.secondary a:hover {
-      background: #124066;
+    background: #124066;
   } 
 }
 
 /* Desktop menu */
 @media all and (min-width: 768px) {
   .item {
-      display: block;
-      width: auto;
+    display: block;
+    width: auto;
   }
   .toggle {
-      display: none;
+    display: none;
   }
   .logo {
       order: 0;
   }
   .item {
-      order: 1;
+    order: 1;
   }
   .button {
-      order: 2;
+    order: 2;
   }
   .menu li {
-      padding: 15px 10px;
+    padding: 15px 10px;
   }
   .menu li.button {
-      padding-right: 0;
+    padding-right: 0;
   }
 }

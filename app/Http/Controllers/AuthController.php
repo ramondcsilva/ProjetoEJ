@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    public function servicesView (){
+        return view('home.homeService');
+    }
     
     public function dashboard(){
         if(Auth::check() === true){

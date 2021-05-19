@@ -78,12 +78,16 @@ body {
 }
 
 .nav-header {
+  width: 100%;
+}
+
+nav {
   background: #fff;
-  padding: 10px 30px;
 }
 
 ul {
   list-style-type: none;
+  margin-right: 10px;
 }
 
 .img-nav{
@@ -91,9 +95,7 @@ ul {
   vertical-align: top;
   width: 200px;
   height: 50px;
-  margin-right: 20px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 20px;
 }
 
 a {
@@ -141,6 +143,7 @@ a:hover {
 .item.button a {
   color: white;
 }
+
 .item.button.secondary a {
   color: white;
 }
@@ -325,7 +328,6 @@ tr td:last-child {
 
 .table-responsive {
   width: 100%;
-  overflow-x: auto;
 }
 
 

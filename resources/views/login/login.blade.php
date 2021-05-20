@@ -20,7 +20,7 @@
           <form method="post" action="{{route('/login/auth')}}">
           @csrf
             <div class="mar20 inside-form">
-              <h2 class="font_white text-center">Login</h2>
+              <h2 class="font_white text-center">Log In</h2>
               
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope "></i></span>

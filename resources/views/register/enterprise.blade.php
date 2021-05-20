@@ -9,7 +9,7 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="https://use.fontawesome.com/1dec14be15.js"></script>
-  <title>EJ Empresa</title>
+  <title>EJ Cadastrar Empresa Jr</title>
 </head>
 <body>
   <div class="container-fluid stylish-form">

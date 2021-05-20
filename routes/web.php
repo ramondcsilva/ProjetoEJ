@@ -5,6 +5,7 @@ use App\Http\Controllers\EnterpriseController;
 use App\Http\Controllers\FederationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,9 @@ Route::post('/enterprise/list/unique', [EnterpriseController::class, 'listUnique
 Route::get('/federation', [FederationController::class, 'create'])->middleware('auth');
 Route::post('/federation/new', [FederationController::class, 'store'])->middleware('auth');
 
-Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::get('/home/login', [AuthController::class, 'showLogin'])->name('home.login');
 Route::post('/login/auth', [AuthController::class, 'login'])->name('/login/auth');
 Route::get('/home', [AuthController::class, 'dashboard'])->name('homeLoged')->middleware('auth');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+
+Auth::routes();

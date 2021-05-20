@@ -32,7 +32,7 @@ class FederationController extends Controller
     {
         $federation = new Federation;
         $states = State::get();
-        return view('federation', ['federation' => $federation,'states' => $states]);
+        return view('register.federation', ['federation' => $federation,'states' => $states]);
     }
 
     /**

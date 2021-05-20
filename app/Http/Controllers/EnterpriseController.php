@@ -29,15 +29,6 @@ class EnterpriseController extends Controller
         $search = null;
         return view('home.listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select, 'search' => $search]);
     }
-
-    public function selectValueLoged(Request $request)
-    {
-        $enterprises = Enterprise::get();
-        $federation = Federation::get();
-        $select = $request->selected;
-
-        return view('listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select]);
-    }
     
     /**
      * Display a listing of the resource.
@@ -52,20 +43,6 @@ class EnterpriseController extends Controller
         $search = $request->search;
         return view('home.listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select, 'search' => $search]);
     }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function indexLoged(Request $request)
-    {
-        $enterprises = Enterprise::get();
-        $federation = Federation::get();
-        $select = $request->selected;
-        return view('listenterprises', ['enterprises' => $enterprises, 'federation' => $federation, 'select' => $select]);
-    }
-
     
     /**
      * Show the form for creating a new resource.
@@ -77,7 +54,7 @@ class EnterpriseController extends Controller
         $enterprise = new Enterprise;
         $federations = Federation::get();
 
-        return view('enterprise', ['federations' => $federations,'enterprise' => $enterprise]);
+        return view('register.enterprise', ['federations' => $federations,'enterprise' => $enterprise]);
     }
 
     /**

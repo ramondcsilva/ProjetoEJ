@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>EJ Home</title>
+    <title>EJ Empresas Jrs</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/home.css') }}" >
     
@@ -27,7 +27,8 @@
               <li class="item"><a href="{{ url('home')}}">Home</a></li>
               <li class="item"><a href="{{ url('services')}}">Serviços</a></li>
               <li class="item"><a href="{{ url('enterprise/list')}}">Empresas Junior</a></li>
-              <li class="item button" style="line-height: 1.5;"><a href="{{ url('login')}}">Log In</a></li>
+              <li class="item button" style="line-height: 1.5;"><a href="{{ route('home.login')}}">Log In</a></li>
+              <li class="item button secondary"><a href="{{ route('register')}}">Sign Out</a></li>
             @endauth
           </ul>
         </nav>

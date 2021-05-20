@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>EJ Home</title>
+    <title>EJ Serviços</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -29,7 +29,8 @@
               <li class="item"><a href="{{ url('home')}}">Home</a></li>
               <li class="item"><a href="{{ url('services')}}">Serviços</a></li>
               <li class="item"><a href="{{ url('enterprise/list')}}">Empresas Junior</a></li>
-              <li class="item button"><a href="{{ url('login')}}">Log In</a></li>
+              <li class="item button"><a href="{{ route('home.login')}}">Log In</a></li>
+              <li class="item button secondary"><a href="{{ route('register')}}">Sign Out</a></li>
             @endauth  
           </ul>
         </nav>

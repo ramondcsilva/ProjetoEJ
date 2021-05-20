@@ -29,8 +29,9 @@
               <li class="item"><a href="{{ url('home')}}">Home</a></li>
               <li class="item"><a href="{{ url('services')}}">Serviços</a></li>
               <li class="item"><a href="{{ url('enterprise/list')}}">Empresas Junior</a></li>
-              <li class="item button"><a href="{{ url('login')}}">Log In</a></li>
-            @endauth 
+              <li class="item button"><a href="{{ route('home.login')}}">Log In</a></li>
+              <li class="item button secondary"><a href="{{ route('register')}}">Sign Out</a></li>
+            @endauth
           </ul>
         </nav>
       </div>

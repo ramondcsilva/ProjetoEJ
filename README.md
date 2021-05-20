@@ -10,7 +10,7 @@
 ## Project Setup #1
 
 ```bash
-composer instal
+composer install
 ```
 
 ## Config .env

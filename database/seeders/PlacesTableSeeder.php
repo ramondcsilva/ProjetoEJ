@@ -28,7 +28,7 @@ class PlacesTableSeeder extends Seeder
         "Piauí", "sigla",
         "Rio de Janeiro",
         "Rio Grande do Norte",
-        "Rio Grande",
+        "Rio Grande do Sul",
         "Rondônia",
         "Roraima",
         "Santa Catarina",
